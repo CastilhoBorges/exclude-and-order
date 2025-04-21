@@ -1,10 +1,17 @@
 // Insert The Object
-const objeto = {};
+const translate = {
+  labelErrorInUser: 'Error in User',
+  labelErrorInSystem: 'Error in System',
+  labelErrorInUser: 'Error in User',
+  labelErrorInUser: 'Error in User',
+  labelNotFound: 'Not Found',
+  labelNotFound: 'Not Found',
+};
 
 const fs = require('fs');
 const path = require('path');
 
-function excludeAndOrderJson(objeto) {
+function excludeAndOrder(objeto) {
   const seenValues = new Set();
   const uniqueEntries = [];
 
@@ -25,22 +32,22 @@ function excludeAndOrderJson(objeto) {
   return result;
 }
 
-const resultado = excludeAndOrderJson(objeto);
+const result = excludeAndOrder(translate);
 
 const jsObjectString =
   'module.exports = {\n' +
-  Object.entries(resultado)
+  Object.entries(result)
     .map(([key, value]) => `  ${key}: '${value}'`)
     .join(',\n') +
   '\n};\n';
 
-const pastaDestino = path.join(__dirname, 'resultado');
-const caminhoArquivo = path.join(pastaDestino, 'output.js');
+const destinationFolder = path.join(__dirname, 'result');
+const filePath = path.join(destinationFolder, 'output.js');
 
-if (!fs.existsSync(pastaDestino)) {
-  fs.mkdirSync(pastaDestino);
+if (!fs.existsSync(destinationFolder)) {
+  fs.mkdirSync(destinationFolder);
 }
 
-fs.writeFileSync(caminhoArquivo, jsObjectString, 'utf-8');
+fs.writeFileSync(filePath, jsObjectString, 'utf-8');
 
-console.log(`✅ Arquivo JS salvo em: ${caminhoArquivo}`);
+console.log(`✅ Arquivo JS salvo em: ${filePath}`);

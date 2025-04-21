@@ -1,6 +1,6 @@
-# 🧹 Script for sorting and removing duplicates in locale objects (i18n)
+# Script for sorting and removing duplicates in locale objects (i18n)
 
-## 📝 Description
+## Description
 
 I was working on a task at work where **internationalization (i18n) locale files** needed to be sorted. It was an old feature that had been dormant for a long time, and when I tried to work on it and merge with the current `main` branch, there were **more than 1000 lines of conflicts** — considering the file already had about **1600 lines normally**.
 
@@ -10,7 +10,7 @@ In the end, it generates a `.js` file with the processed object.
 
 ---
 
-## 🚀 How to use
+## How to use
 
 ### 1. Clone or copy the script
 
@@ -55,19 +55,19 @@ module.exports = {
 };
 ```
 
-## 🛠️ What the script does
+## What the script does
 
 - Removes duplicate values from the object (keeping the first key found).
 - Sorts all keys alphabetically.
 - Generates a JavaScript file in a readable format.
 - Creates the result folder automatically if it doesn't exist.
 
-## 🤓 Why this was useful
+## Why this was useful
 
 - Avoided hours of manually resolving conflicts in huge locale files.
 - Ensures the file is clean and consistent.
 - Helps keep translations organized and easy to maintain.
 
-## 📌 Requirements
+## Requirements
 
 - Node.js installed on the machine.

@@ -1,11 +1,12 @@
 // Insert The Object
 const translate = {
-  labelErrorInUser: 'Error in User',
-  labelErrorInSystem: 'Error in System',
-  labelErrorInUser: 'Error in User',
-  labelErrorInUser: 'Error in User',
-  labelNotFound: 'Not Found',
-  labelNotFound: 'Not Found',
+  label1: 'label1',
+  label2: 'label2',
+  label3: 'label3',
+  label4: 'label4',
+  label5: 'label1',
+  label6: 'label1',
+  label7: 'label1',
 };
 
 const fs = require('fs');

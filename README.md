@@ -2,11 +2,11 @@
 
 ## Description
 
-I was working on a task at work where **internationalization (i18n) locale files** needed to be sorted. It was an old feature that had been dormant for a long time, and when I tried to work on it and merge with the current `main` branch, there were **more than 1000 lines of conflicts** — considering the file already had about **1600 lines normally**.
+I was working on a feature at work that involved sorting internationalization (i18n) locale files. It was an old pull request that had been inactive for quite some time, and when I tried to resume it and merge it with the current main branch, I ended up with over 1000 lines of conflicts — considering the file normally had around 1600 lines.
 
-To avoid the chaos of resolving everything manually, I created this script where I could **copy the locale object and paste it directly into the code**. The script removes duplicate values (keeping the first occurrence) and sorts all keys alphabetically.
+To avoid the chaos of resolving everything manually, I created a script where I could simply copy the locale object and paste it directly into the code. The script removes duplicate values (keeping the first occurrence) and sorts all keys alphabetically.
 
-In the end, it generates a `.js` file with the processed object.
+In the end, it generates a .js file with the processed object.
 
 ---
 
